@@ -1,0 +1,27 @@
+2013-09-18 23:35:25.682 SampleApp[20550:c07] Multi-tasking -> Device: YES, App: YES
+2013-09-18 23:35:25.728 SampleApp[20550:c07] Resetting plugins due to page load.
+2013-09-18 23:35:25.767 SampleApp[20550:c07] Finished load of: file:///Users/chris/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/44052A22-9456-4FD2-8457-1CD6953EC4FA/SampleApp.app/www/index.html
+2013-09-18 23:36:41.940 SampleApp[20893:c07] Multi-tasking -> Device: YES, App: YES
+2013-09-18 23:36:41.969 SampleApp[20893:c07] Resetting plugins due to page load.
+2013-09-18 23:36:42.005 SampleApp[20893:c07] Finished load of: file:///Users/chris/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/44052A22-9456-4FD2-8457-1CD6953EC4FA/SampleApp.app/www/index.html
+2013-09-18 23:37:33.396 SampleApp[21205:c07] Multi-tasking -> Device: YES, App: YES
+2013-09-18 23:37:33.430 SampleApp[21205:c07] Resetting plugins due to page load.
+2013-09-18 23:37:33.467 SampleApp[21205:c07] Finished load of: file:///Users/chris/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/44052A22-9456-4FD2-8457-1CD6953EC4FA/SampleApp.app/www/index.html
+2013-09-19 00:28:09.058 SampleApp[22161:c07] Multi-tasking -> Device: YES, App: YES
+2013-09-19 00:28:09.092 SampleApp[22161:c07] Resetting plugins due to page load.
+2013-09-19 00:28:09.125 SampleApp[22161:2803] ERROR whitelist rejection: url='http://localhost:8080/dojo/dojo.js'
+2013-09-19 00:28:09.126 SampleApp[22161:2803] ERROR whitelist rejection: url='http://localhost:8080/dojo/dojo.js'
+2013-09-19 00:28:09.126 SampleApp[22161:2803] ERROR whitelist rejection: url='http://localhost:8080/dojo/dojo.js'
+2013-09-19 00:28:09.127 SampleApp[22161:2803] ERROR whitelist rejection: url='http://localhost:8000/idx/mobile/themes/oneui_ios/oneui_ios.css'
+2013-09-19 00:28:09.127 SampleApp[22161:2803] ERROR whitelist rejection: url='http://localhost:8000/idx/mobile/themes/oneui_ios/oneui_ios.css'
+2013-09-19 00:28:09.128 SampleApp[22161:2803] ERROR whitelist rejection: url='http://localhost:8000/idx/mobile/themes/oneui_ios/oneui_ios.css'
+2013-09-19 00:28:09.136 SampleApp[22161:c07] Finished load of: file:///Users/chris/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/44052A22-9456-4FD2-8457-1CD6953EC4FA/SampleApp.app/www/index.html
+2013-09-19 00:44:21.342 SampleApp[22744:c07] Multi-tasking -> Device: YES, App: YES
+2013-09-19 00:44:21.380 SampleApp[22744:c07] Resetting plugins due to page load.
+2013-09-19 00:44:21.406 SampleApp[22744:2703] ERROR whitelist rejection: url='http://localhost:8080/dojo/dojo.js'
+2013-09-19 00:44:21.406 SampleApp[22744:2703] ERROR whitelist rejection: url='http://localhost:8080/dojo/dojo.js'
+2013-09-19 00:44:21.407 SampleApp[22744:2703] ERROR whitelist rejection: url='http://localhost:8080/dojo/dojo.js'
+2013-09-19 00:44:21.408 SampleApp[22744:2703] ERROR whitelist rejection: url='http://localhost:8080/idx/mobile/themes/oneui_ios/oneui_ios.css'
+2013-09-19 00:44:21.408 SampleApp[22744:2703] ERROR whitelist rejection: url='http://localhost:8080/idx/mobile/themes/oneui_ios/oneui_ios.css'
+2013-09-19 00:44:21.408 SampleApp[22744:2703] ERROR whitelist rejection: url='http://localhost:8080/idx/mobile/themes/oneui_ios/oneui_ios.css'
+2013-09-19 00:44:21.418 SampleApp[22744:c07] Finished load of: file:///Users/chris/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/44052A22-9456-4FD2-8457-1CD6953EC4FA/SampleApp.app/www/index.html

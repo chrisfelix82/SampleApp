@@ -1,0 +1,931 @@
+/*
+ * Licensed Materials - Property of IBM
+ * (C) Copyright IBM Corp. 2010, 2012 All Rights Reserved
+ * US Government Users Restricted Rights - Use, duplication or
+ * disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+ */
+
+/************ Main Container ************/
+.oneui .idxFlipCardContainer{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.oneui .idxFlipCardContainer .idxFlipCardNavBar{
+	background: rgb(70,70,70); /* Old browsers */
+	background: -moz-linear-gradient(left, rgba(70,70,70,1) 0%, rgba(18,18,18,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(70,70,70,1)), color-stop(100%, rgba(18,18,18,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left, rgba(70,70,70,1) 0%, rgba(18,18,18,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -ms-linear-gradient(left, rgba(70,70,70,1) 0%, rgba(18,18,18,1) 100%); /* IE10+ */
+	background: linear-gradient(left, rgba(70,70,70,1) 0%, rgba(18,18,18,1) 100%); /* W3C */
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 38px;
+    z-index: 500;
+}
+
+.oneui .idxFlipCardContainer .idxFlipCardNavBar .idxFlipCardNavBarTop{
+	list-style: 0;
+	margin: 0;
+	padding: 5px 3px;
+    position: absolute;
+	top: 5;
+    left: 0;
+}
+.oneui .idxFlipCardContainer .idxFlipCardNavBar .idxFlipCardNavBarBottom{
+	list-style: 0;
+	margin: 0;
+	padding: 5px 3px;
+	background-color: rgba(0, 0, 0, 0.4);
+    border-top: 1px solid #484848;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.oneui .idxFlipCardContainer .idxFlipCardNavBar .navItem{
+	width: 100%;
+	text-align: center;
+	display: block;
+	cursor: pointer;
+	border-top: 1px solid transparent;
+	border-bottom: 1px solid transparent;
+	-webkit-transition: opacity 0.5s ease;
+	-moz-transition: opacity 0.5s ease;
+	-ms-transition: opacity 0.5s ease;
+	-o-transition: opacity 0.5s ease;
+	transition: opacity 0.5s ease;
+}
+
+.oneui .idxFlipCardContainer .idxFlipCardNavBar .navItemHover{
+	background-color: rgba( 255, 255, 255, .1);
+	border-top: 1px solid rgba( 255, 255, 255, .20);
+	border-bottom: 1px solid rgba( 255, 255, 255, .20);
+}
+.oneui .idxFlipCardContainer .idxFlipCardNavBar .navItemActive{
+	background-color: rgba( 0, 0, 0, .1);
+	border-top: 1px solid rgba( 255, 255, 255, .20);
+	border-bottom: 1px solid rgba( 255, 255, 255, .20);
+}
+
+.oneui .idxFlipCardContainer .idxFlipCardNavBar .navItem .navItemIcon{
+	width: 30px;
+	height: 30px;
+	opacity: .7;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	transition: all 1s ease;
+}
+.oneui .idxFlipCardContainer .idxFlipCardNavBar .navItemHover .navItemIcon{
+	opacity: .9;
+}
+.oneui .idxFlipCardContainer .idxFlipCardNavBar .navItemActive .navItemIcon{
+	opacity: 1;
+}
+
+
+
+/************ Config Container ************/
+.oneui .idxFlipCardContainer .idxFlipCardContent{
+	position: absolute;
+	left: 38px;
+	width: 95%;
+	height: 99%;
+}
+.oneui .idxFlipCardContainer .contentBorder{
+	padding:0;
+	margin:0;
+}
+.oneui .idxFlipCardContainer .dijitBorderContainer{
+	width: 100%;
+	height: 100%;
+}
+
+.oneui .idxFlipCardContainer .centerExpando{
+	background-color: #222222;
+    color: #CCCCCC;
+    padding: 0;
+    width: 18%;
+}
+.oneui .idxFlipCardContainer .dojoxExpandoPane {
+	overflow:hidden;
+	z-index:440 !important;
+}
+.oneui .idxFlipCardContainer .dojoxExpandoPane .dojoxExpandoTitle{
+	background-color: #222222;
+	border-bottom: 1px solid #444444;
+    color: #F0F0F0;
+    margin: 0 0 10px;
+    padding: 10px;
+    text-shadow: 1px 0 0 #000000;
+}
+.oneui .idxFlipCardContainer .dojoxExpandoPane .dojoxExpandoWrapper {
+	overflow:hidden;
+}
+.oneui .idxFlipCardContainer .dojoxExpandoClosed .dojoxExpandoTitleNode {
+	display:none;
+}
+.dojoxExpandoClosed .dojoxExpandoWrapper * {
+	overflow:hidden !important;
+}
+.oneui .idxFlipCardContainer .dojoxExpandoTitleNode {
+	padding-right:6px; 
+	padding-left:6px;
+}
+
+.oneui .idxFlipCardContainer .dojoxExpandoIcon .a11yNode {
+	display:none;
+	visibility:hidden;
+}
+.oneui .idxFlipCardContainer .dojoxExpandoBottom .dojoxExpandoIcon,
+.oneui .idxFlipCardContainer .dojoxExpandoTop .dojoxExpandoIcon,
+.oneui .idxFlipCardContainer .dojoxExpandoLeft .dojoxExpandoIcon {
+	float:right;
+	margin-right:2px;
+}
+.oneui .idxFlipCardContainer .dojoxExpandoRight .dojoxExpandoIcon {
+	float:left;
+	margin-left:2px;
+}
+.oneui .idxFlipCardContainer .dojoxExpandoIcon {
+	width:14px;
+	cursor:pointer;
+	background-position:-60px 0px;
+	background-repeat: no-repeat;
+	height:14px;
+}
+.oneui .idxFlipCardContainer .dojoxExpandoClosed .dojoxExpandoIcon {
+	background-position: 0px 0px;
+	margin:0 auto;
+}
+.oneui .idxFlipCardContainer .dijitBorderContainer-dijitExpandoPane {
+	border: none !important; 
+}
+.oneui .idxFlipCardContainer .dojoxExpandoTitle {
+	font-weight: bold;
+	border:1px solid #769DC0;
+	border-bottom:none;
+    background-color:#cde8ff;
+	background-image: url("images/standardGradient.png");
+    background-position:0px 0px;
+    background-repeat:repeat-x;
+	padding: 5px 7px 2px 7px;
+    min-height:17px;
+    color:#4a4a4a;
+}
+.oneui .idxFlipCardContainer .dojoxExpandoClosed .dojoxExpandoTitle {
+	background: none;
+	background-color: #E6E6E7;
+	border: none;
+	padding:3px;
+}
+.oneui .idxFlipCardContainer .dojoxExpandoClosed {
+	background: none;
+	background-color: #E6E6E7;
+}
+.oneui .idxFlipCardContainer .dojoxExpandoRight .dojoxExpandoTitle,
+.oneui .idxFlipCardContainer .dojoxExpandoLeft .dojoxExpandoTitle,
+.oneui .idxFlipCardContainer .dojoxExpandoClosed .dojoxExpandoTitle{
+	background-color: #222222;
+	border: none;
+	border-bottom: 1px solid #444444;
+}
+.oneui .idxFlipCardContainer .dojoxExpandoClosed .dojoxExpandoTitle{
+	background-image: url("images/standardGradient.png");
+	background-position:0 0;
+}
+.oneui .idxFlipCardContainer .dojoxExpandoIcon {
+	background-image: url("images/spriteRoundedIconsSmall.gif");
+	display: none;
+}
+.oneui .idxFlipCardContainer .dojoxExpandoClosed .dojoxExpandoIconLeft,
+.oneui .idxFlipCardContainer .dojoxExpandoClosed .dojoxExpandoIconRight,
+.oneui .idxFlipCardContainer .dojoxExpandoClosed .dojoxExpandoIconTop,
+.oneui .idxFlipCardContainer .dojoxExpandoClosed .dojoxExpandoIconBottom {
+	margin-top: 3px;
+}
+.oneui .idxFlipCardContainer .dojoxExpandoClosed .dojoxExpandoIcon {
+	margin-right:4px;
+}
+.oneui .idxFlipCardContainer .dojoxExpandoIconLeft {
+  	background-position: 0 0;
+}
+.oneui .idxFlipCardContainer .dojoxExpandoClosed .dojoxExpandoIconLeft {
+  	background-position: -30px 0;
+	margin-right: 4px;
+}
+.oneui .idxFlipCardContainer .dojoxExpandoIconRight {
+  	background-position: -30px 0;
+}
+.oneui .idxFlipCardContainer .dojoxExpandoClosed .dojoxExpandoIconRight {
+  	background-position: 0 0;
+	margin-left: 4px;
+}
+.oneui .idxFlipCardContainer .dojoxExpandoIconBottom {
+  	background-position: -15px 0;
+}
+.oneui .idxFlipCardContainer .dojoxExpandoClosed .dojoxExpandoIconBottom {
+  	background-position: -45px 0;
+	margin-top:1px;
+}
+.oneui .idxFlipCardContainer .dojoxExpandoIconTop {
+  	background-position: -45px 0;
+}
+.oneui .idxFlipCardContainer .dojoxExpandoClosed .dojoxExpandoIconTop {
+  	background-position: -15px 0;
+}
+
+.oneui .idxFlipCardContainer .dojoxExpandoContent .expandoContentPane{
+	width: 99%;
+	height: 99%;
+	padding: 0;
+	margin: 0;
+}
+
+.oneui .idxFlipCardContainer .dojoxExpandoContent .dijitMenu{
+	border: none;
+}
+.oneui .idxFlipCardContainer .dojoxExpandoContent .dijitMenuTable {
+	width: 98%;
+}
+.oneui .idxFlipCardContainer .dojoxExpandoContent .dijitMenuTable .dijitMenuItem{
+	color: #CCCCCC;
+	background-color: #222222;
+	border: none;
+}
+.oneui .idxFlipCardContainer .dojoxExpandoContent .dijitMenuTable .dijitMenuItemHover{
+	background-color: #222222;
+	background-image: url("images/standardGradient.png");
+	background-repeat: repeat-x;
+	background-image: -moz-linear-gradient(rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 100%);
+	background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 100%);
+	background-image: -o-linear-gradient(rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 100%);
+	background-image: -ms-linear-gradient(rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 100%);
+	background-image: linear-gradient(rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 100%);
+	_background-image: none;
+}
+.oneui .idxFlipCardContainer .dojoxExpandoContent .dijitMenuTable .dijitMenuItemActive{
+	background-color: #000000;
+	background-repeat: repeat-x;
+	background-image: -moz-linear-gradient(rgba(190, 190, 190, 0.98) 0px, rgba(255, 255, 255, 0.65) 3px, rgba(255, 255, 255, 0) 100%);
+	background-image: -webkit-linear-gradient(rgba(190, 190, 190, 0.98) 0px, rgba(255, 255, 255, 0.65) 3px, rgba(255, 255, 255, 0) 100%);
+	background-image: -o-linear-gradient(rgba(190, 190, 190, 0.98) 0px, rgba(255, 255, 255, 0.65) 3px, rgba(255, 255, 255, 0) 100%);
+	background-image: -ms-linear-gradient(rgba(190, 190, 190, 0.98) 0px, rgba(255, 255, 255, 0.65) 3px, rgba(255, 255, 255, 0) 100%);
+	background-image: linear-gradient(rgba(190, 190, 190, 0.98) 0px, rgba(255, 255, 255, 0.65) 3px, rgba(255, 255, 255, 0) 100%);
+	_background-image: none;
+}
+.oneui .idxFlipCardContainer .dojoxExpandoContent .dijitMenuTable .dijitMenuItemIconCell{
+	border: none !important;
+}
+.oneui .idxFlipCardContainer .dojoxExpandoContent .dijitMenuTable .dijitMenuItemLabel{
+	border: none;
+}
+.oneui .idxFlipCardContainer .dojoxExpandoContent .dijitMenuTable .dijitMenuArrowCell{
+	border: none;
+}
+
+.oneui .idxFlipCardContainer .dojoxExpandoContent .dijitMenuTable .oneuiMenuHeadingLabel{
+	padding: 5px 0px 5px 15px;
+	background-color: #222222;
+    color: #CCCCCC;
+	font-size: 1em;
+	color: #eee;
+	text-shadow: 1px 0 0 #000;
+	background: rgb(70,70,70); /* Old browsers */
+	background: -webkit-linear-gradient(top, rgba(70,70,70,1) 0%, rgba(18,18,18,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -moz-linear-gradient(top, rgba(70,70,70,1) 0%, rgba(18,18,18,1) 100%); /* FF3.6+ */
+	background: -ms-linear-gradient(top, rgba(70,70,70,1) 0%, rgba(18,18,18,1) 100%); /* IE10+ */
+	background: linear-gradient(top, rgba(70,70,70,1) 0%, rgba(18,18,18,1) 100%); /* W3C */
+	border: none;
+	border-bottom: 1px solid #000;
+}
+
+
+
+/************ Grid Container ************/
+.dragNode{
+	z-index:10000;
+	cursor:move;
+}
+.dragHandle{
+	cursor:move;
+}
+.dropIndicator{
+	position:relative;
+	height:50px;
+	border:1px dashed #FFF;
+}
+.dropIndicator > div{
+	position:absolute;
+	left:0;top:0;right:0;bottom:0;	
+	background-color:#000;
+	opacity:0.17; 
+	filter:alpha(opacity=17); 
+	-khtml-opacity:0.17; 
+	-moz-opacity:0.17;
+}
+.dndCover{
+	background-image:url("images/pixel.gif");
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:1000px;
+	z-index:9999;
+	cursor:move;
+}
+.dndCover2{
+	z-index: 10001;
+}
+.dragNode{
+	z-index:10000;
+	cursor:move;
+}
+.dragHandle{
+	cursor:move;
+}
+.dropIndicator{
+	position:relative;
+	height:50px;
+	border:1px dashed #FFF;
+}
+.dropIndicator > div{
+	position:absolute;
+	left:0;top:0;right:0;bottom:0;	
+	background-color:#000;
+	opacity:0.17; 
+	filter:alpha(opacity=17); 
+	-khtml-opacity:0.17; 
+	-moz-opacity:0.17;
+}
+.dndCover{
+	background-image:url(data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw%3D%3D);
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:1000px;
+	z-index:9999;
+	cursor:move;
+}
+.orange .dndCover2{
+	z-index: 10001;
+}
+
+.oneui .idxFlipCardContainer .centerContainer{
+	width:100%;
+	height:100%;
+	padding:0;
+	margin:0;
+	position: relative;
+	/*overflow: hidden;*/
+}
+.oneui .idxFlipCardContainer .centerContainer.css3Animations{
+	-webkit-perspective: 800px;
+	-moz-perspective: 800px;
+	-ms-perspective: 800px;
+	perspective: 800px;
+}
+.oneui .idxFlipCardContainer .centerGridContainer{
+	border: 1px solid #BFBFBF;
+	position: absolute;
+	
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	border-radius: 4px;
+	/*
+	-webkit-box-shadow: 0 2px 5px rgba( 0,0,0,0.25);
+	-moz-box-shadow: 0 2px 5px rgba( 0,0,0,0.25);
+	-ms-box-shadow: 0 2px 5px rgba( 0,0,0,0.25);
+	box-shadow: 0 2px 5px rgba( 0,0,0,0.25);
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	*/
+}
+.oneui .idxFlipCardContainer .centerGridContainer.css3Animations{
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transition: -webkit-transform 1.5s linear;
+	-moz-transition: -moz-transform 1.5s linear;
+	-ms-transition: -ms-transform 1.5s linear;
+	transition: transform 1.5s linear;
+}
+.oneui .idxFlipCardContainer .centerGridContainer.css3Animations.centerGridFlipOut{
+	-webkit-transform: translateX(-110%) rotateY(180deg);
+	-moz-transform: translateX(-110%) rotateY(180deg);
+	-ms-transform: translateX(-110%) rotateY(180deg);
+	transform: translateX(-110%) rotateY(180deg);
+}
+.oneui .idxFlipCardContainer .centerGridContainer.css3Animations.centerGridFlipIn{
+	-webkit-transform: translateX(0) rotateY(0);
+	-moz-transform: translateX(0) rotateY(0);
+	-ms-transform: translateX(0) rotateY(0);
+	transform: translateX(0) rotateY(0);
+}
+.oneui .idxFlipCardContainer .gridContainer{
+	display:block;	
+	background:#FFF;	
+	margin:0;	
+	width:99%;
+	height:99%;
+	overflow-y:auto;
+	overflow-x:hidden !important;
+}
+.oneui .idxFlipCardContainer .centerGridContainer.css3AnimationsForResize{
+	-webkit-transition: all 1s ease-in-out; 
+	-moz-transition: all 1s ease-in-out; 
+	-o-transition: all 1s ease-in-out; 
+	-ms-transition: all 1s ease-in-out; 
+	transition: all 1s ease-in-out;
+}
+.oneui .idxFlipCardContainer .gridContainerMaximum{
+	/*overflow: hidden;*/
+}
+.oneui .idxFlipCardContainer .gridContainer .gridContainerTable{
+	width:100%;
+	height:100%;
+	display:table;
+}
+.oneui .idxFlipCardContainer .gridContainerMaximum .gridContainerTable{
+}
+
+.oneui .idxFlipCardContainer .gridContainerTable .gridContainerTr{
+	height:100%;
+	display:table-row;
+}
+.oneui .idxFlipCardContainer .gridContainerMaximum .gridContainerTr{
+}
+
+.oneui .idxFlipCardContainer .gridContainerZone{
+	vertical-align:top;	
+	background-color:#FDFDFD;	
+	height:100%;
+	display:table-cell;
+}
+.oneui .idxFlipCardContainer .centerGridContainer.css3AnimationsForResize .gridContainerZone{
+	-webkit-transition: all 1s ease-in-out; 
+	-moz-transition: all 1s ease-in-out; 
+	-o-transition: all 1s ease-in-out; 
+	-ms-transition: all 1s ease-in-out; 
+	transition: all 1s ease-in-out;
+}
+.oneui .idxFlipCardContainer .gridContainerMaximum .gridColumnDisappear{
+	display:none;
+}
+.oneui .idxFlipCardContainer .gridContainerMaximum .gridColumnMaximum{
+	width:100% !important;
+}
+
+
+.oneui .idxFlipCardContainer .gridContainerZone .serviceWidgetTitleText h2{
+	position:relative;
+}
+.oneui .idxFlipCardContainer .gridContainerGrip{
+	cursor:default;
+	position:absolute;
+	top:0;	
+	width:10px;	
+	padding:0;	
+	margin:0;
+	background-image:url("images/pixel.gif");
+	height:100%;
+}
+.oneui .idxFlipCardContainer .gridContainerGripShow{
+	cursor:e-resize;	
+	position:absolute;	
+	top:0;
+	width:10px;	
+	padding:0;	
+	margin:0;	
+	background-image:url("images/gridcontainer_grip.gif");
+	height:100%;
+}
+.oneui .idxFlipCardContainer .dropIndicator{
+	border:2px dashed #BFBFBF;
+}
+.oneui .idxFlipCardContainer .dropIndicator > div{
+	background-color:#FFF;
+}
+.oneui .idxFlipCardContainer .gridContainerZone > *{
+	margin: 10px !important;
+}
+.oneui .idxFlipCardContainer .dojoDndItemOver{
+	background-color: #feb !important;
+}
+.oneui .idxFlipCardContainer .dojoDndItemSelected{
+	background: #ccf; color: #444;
+}
+.oneui .idxFlipCardContainer .dojoDndItemBefore{
+	border-top:    3px solid red;
+}
+.oneui .idxFlipCardContainer .dojoDndItemAfter{
+	border-bottom: 3px solid red;
+}
+.oneui .idxFlipCardContainer .dojoDndItemAnchor{
+	background: #ccf; color: black;
+}
+.oneui .idxFlipCardContainer .dojoDndItemOver.dojoDndItemSelected{
+	background: #ec8;
+}
+.oneui .idxFlipCardContainer .dojoDndItemOver.dojoDndItemAnchor{
+	background: #feb !important;
+}
+.oneui .idxFlipCardContainer .dojoDndAvatarItem{
+	background: #eee;
+}
+.oneui .idxFlipCardContainer .dndDropIndicator {
+	border: 1px dashed #FF6600;cursor: default;
+}
+
+
+/************ Portlet Container ************/
+
+.oneui .idxFlipCardContainer .portletItem,
+.oneui .dndCover .portletItem{
+	z-index: 20000;
+	padding: 0;
+	margin: 0;
+	overflow: visible;
+	position: relative;
+	background-color: transparent;
+	height: 280px;
+	/*width: 95% !important;*/
+}
+.oneui .dndCover .portletItem{
+	/*width: 300px !important;*/
+}
+
+.oneui .idxFlipCardContainer .portletItem.css3Animations,
+.oneui .dndCover .portletItem.css3Animations{
+	-webkit-perspective: 500px;
+	-moz-perspective: 500px;
+	-o-perspective: 500px;
+	-ms-perspective: 500px;
+	perspective: 500px;
+	/*
+	-webkit-perspective-origin: 50px 50px;
+	-moz-perspective-origin: 50px 50px;
+	-o-perspective-origin: 50px 50px;
+	-ms-perspective-origin: 50px 50px;
+	perspective-origin: 50px 50px;
+	*/
+}
+.dj_ie10 .oneui .idxFlipCardContainer .portletItem.css3Animations,
+.dj_ie10 .oneui .dndCover .portletItem.css3Animations{
+	-ms-perspective: 0;
+	perspective: 0;
+}
+
+.oneui .idxFlipCardContainer .centerGridContainer.css3AnimationsForResize .portletItem{
+	-webkit-transition: all 1s ease-in-out; 
+	-moz-transition: all 1s ease-in-out; 
+	-o-transition: all 1s ease-in-out; 
+	-ms-transition: all 1s ease-in-out; 
+	transition: all 1s ease-in-out;
+}
+.oneui .idxFlipCardContainer .centerGridContainer .portletItem.css3AnimationsForResize{
+	-webkit-transition: all 1s ease-in-out; 
+	-moz-transition: all 1s ease-in-out; 
+	-o-transition: all 1s ease-in-out; 
+	-ms-transition: all 1s ease-in-out; 
+	transition: all 1s ease-in-out;
+}
+
+.oneui .idxFlipCardContainer .portletItemMaximum{
+}
+.oneui .idxFlipCardContainer .portletItemMinimum,
+.oneui .dndCover .portletItemMinimum{
+	height: 30px !important;
+}
+.oneui .idxFlipCardContainer .portletItemDisappear{
+	display:none;
+}
+.oneui .idxFlipCardContainer .portletItemDisappear > *{
+	display:none;
+}
+
+.oneui .idxFlipCardContainer .portletItem .portletItemMaxNode{
+	border: 2px solid gray;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	border-radius: 10px;
+	position: absolute;
+	top: 8px;
+	right: 10px;
+	width: 6px;
+	height: 6px;
+	z-index: 999;
+	cursor: pointer;
+}
+.oneui .idxFlipCardContainer .portletItem .portletItemMinNode{
+	border: medium none;
+	border-bottom: 2px solid gray;
+	position: absolute;
+	top: 8px;
+	right: 25px;
+	width: 6px;
+	height: 6px;
+	z-index: 999;
+	cursor: pointer;
+}
+.oneui .idxFlipCardContainer .portletItem.css3Animations .portletItemMaxNode,
+.oneui .idxFlipCardContainer .portletItem.css3Animations .portletItemMinNode{
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transform-origin: -100px 50% 0;
+	-moz-transform-origin: -100px 50% 0;
+	-ms-transform-origin: -100px 50% 0;
+	transform-origin: -100px 50% 0;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transition: -webkit-transform 1.2s linear;
+	-moz-transition: -moz-transform 1.2s linear;
+	-ms-transition: -ms-transform 1.2s linear;
+	transition: transform 1.2s linear;
+	-webkit-transform: rotateY(0);
+	-moz-transform: rotateY(0);
+	-ms-transform: rotateY(0);
+	transform: rotateY(0);
+}
+.oneui .idxFlipCardContainer .portletItemFlip.css3Animations .portletItemMaxNode,
+.oneui .idxFlipCardContainer .portletItemFlip.css3Animations .portletItemMinNode{
+	-webkit-transform: rotateY(360deg);
+	-moz-transform: rotateY(360deg);
+	-ms-transform: rotateY(360deg);
+	transform: rotateY(360deg);
+}
+
+
+/************** portletItem content **************/
+.oneui .idxFlipCardContainer .dojoxPortlet,
+.oneui .dndCover .dojoxPortlet {
+	margin-bottom: 5px;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	border: 1px solid #ccc;
+	
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 2px 5px rgba( 0,0,0,0.25);
+	-moz-box-shadow: 0 2px 5px rgba( 0,0,0,0.25);
+	-ms-box-shadow: 0 2px 5px rgba( 0,0,0,0.25);
+	box-shadow: 0 2px 5px rgba( 0,0,0,0.25);
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.oneui .idxFlipCardContainer .dojoxPortlet.css3Animations,
+.oneui .dndCover .dojoxPortlet.css3Animations{
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transition: -webkit-transform 1.0s linear;
+	-moz-transition: -moz-transform 1.0s linear;
+	-ms-transition: -ms-transform 1.0s linear;
+	transition: transform 1.0s linear;
+}
+.oneui .idxFlipCardContainer .contentResizer.css3Animations{
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transform-origin: -100px 50% 0;
+	-moz-transform-origin: -100px 50% 0;
+	-ms-transform-origin: -100px 50% 0;
+	transform-origin: -100px 50% 0;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transition: -webkit-transform 1.2s linear;
+	-moz-transition: -moz-transform 1.2s linear;
+	-ms-transition: -ms-transform 1.2s linear;
+	transition: transform 1.2s linear;
+	-webkit-transform: rotateY(0);
+	-moz-transform: rotateY(0);
+	-ms-transform: rotateY(0);
+	transform: rotateY(0);
+}
+
+.oneui .idxFlipCardContainer .portletItem.css3Animations .mainContent,
+.oneui .dndCover .portletItem.css3Animations .mainContent {
+	-webkit-transform: rotateY(0);
+	-moz-transform: rotateY(0);
+	-ms-transform: rotateY(0);
+	transform: rotateY(0);
+}
+.oneui .idxFlipCardContainer .portletItem.css3Animations .detailContent,
+.oneui .dndCover .portletItem.css3Animations .detailContent{
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-ms-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+
+.oneui .idxFlipCardContainer .portletItemFlip.css3Animations .mainContent,
+.oneui .dndCover .portletItemFlip.css3Animations .mainContent{
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-ms-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+.oneui .idxFlipCardContainer .portletItemFlip.css3Animations .detailContent,
+.oneui .dndCover .portletItemFlip.css3Animations .detailContent{
+	-webkit-transform: rotateY(360.1deg);
+	-moz-transform: rotateY(360deg);
+	-ms-transform: rotateY(360deg);
+	transform: rotateY(360deg);
+}
+.oneui .idxFlipCardContainer .contentResizerFlip.css3Animations{
+	-webkit-transform: rotateY(360deg);
+	-moz-transform: rotateY(360deg);
+	-ms-transform: rotateY(360deg);
+	transform: rotateY(360deg);
+}
+
+.oneui .idxFlipCardContainer .portletItem .dojoxPortlet .dijitTitlePaneTitleFocus{
+	margin-right: 30px;
+}
+
+.oneui .idxFlipCardContainer .portletItem .dijitTitlePaneTitle{
+	border: none;
+}
+.oneui .idxFlipCardContainer .portletItem .dojoxPortletContentOuter{
+	border:none;
+}
+.oneui .idxFlipCardContainer .dojoxPortlet .dijitTitlePaneTitle .dojoxPortletIcon {
+	width: 15px;
+	height: 15px;
+	float: right;
+	cursor: pointer;
+	background-repeat: no-repeat;
+}
+.oneui .idxFlipCardContainer .dojoxPortlet .dijitTitlePaneTitle {
+	font-weight: bold;
+	font-size: 0.9em;
+	cursor: pointer;
+}
+.oneui .idxFlipCardContainer .dojoxPortlet-nonmovable .dijitTitlePaneTitle {
+	cursor: default;
+}
+
+.oneui .idxFlipCardContainer .dojoxPortlet .dojoxPortletIcon {
+	background-image: url("images/spriteRoundedIconsSmall.gif");
+}
+.oneui .idxFlipCardContainer .dojoxPortlet .dojoxCloseNode {
+	background-position: right 0px;
+}
+.oneui .idxFlipCardContainer .dojoxPortlet .dojoxCloseNodeHover {
+	background-position: right -15px;
+}
+.oneui .idxFlipCardContainer .dojoxPortlet .dijitOpen .dojoxArrowDown{
+	background-position: -15px top;
+}
+.oneui .idxFlipCardContainer .dojoxPortlet .dijitClosed .dojoxArrowDown {
+	background-position: 0 top;
+}
+.oneui .idxFlipCardContainer .dojoxPortlet .dojoxPortletSettingsIcon {
+	background-image: url("images/icons.png");
+	background-position: 0 1px;
+}
+.oneui .idxFlipCardContainer .dojoxPortletSettingsContainer {
+	border-bottom: 1px solid #BFBFBF;
+	padding: 4px;
+}
+.oneui .idxFlipCardContainer .dijitDialogPaneContent .dojoxPortletSettingsContainer {
+	border-bottom: none;
+}
+.oneui .idxFlipCardContainer .dojoxPortlet div.dojoxPortletContentOuter {
+	background: #fff url("images/validationInputBg.gif") repeat-x top left;
+}
+.oneui .idxFlipCardContainer .dojoxFeedPortletList {
+	padding-left: 25px;
+	margin: 0px;
+}
+.oneui .idxFlipCardContainer .dojoxFeedPortletExpandableList {
+	padding-left: 0px;
+	margin: 0px;
+}
+.oneui .idxFlipCardContainer .dojoxFeedPortletExpandableList li {
+	margin-bottom: 5px;
+}
+.oneui .idxFlipCardContainer .dojoxFeedPortletList li {
+	padding-top: 4px;
+}
+.oneui .idxFlipCardContainer .dojoxFeedPortletPreview {
+	max-height: 300px;
+	max-width: 400px;
+	overflow: hidden;
+}
+.oneui .idxFlipCardContainer .dojoxFeedPortletPreview * {
+	max-height: 295px;
+	max-width: 395px;
+}
+.oneui .idxFlipCardContainer .dojoxPortletFeedSettings {
+	padding: 5px;
+	border-bottom: 1px solid #9D9D9D;
+}
+.oneui .idxFlipCardContainer .dojoxFeedPortletExpandableList {
+	list-style: none;
+}
+.oneui .idxFlipCardContainer .dojoxPortletToggleIcon {
+	margin-right: 6px;
+	cursor: pointer;
+}
+.oneui .idxFlipCardContainer .dojoxPortletToggleIcon img {
+	width: 15px;
+	height: 14px;
+}
+.oneui .idxFlipCardContainer .dojoxPortletItemCollapsed .dojoxPortletToggleIcon {
+	background: url("images/plusButton.gif") no-repeat 0 0;
+}
+.oneui .idxFlipCardContainer .dojoxPortletItemOpen .dojoxPortletToggleIcon {
+	background: url("images/minusButton.gif") no-repeat 0 0;
+}
+.oneui .idxFlipCardContainer .dojoxPortletItemSummary {
+	margin-left: 20px;
+}
+.oneui .idxFlipCardContainer .dojoxPortletItemCollapsed .dojoxPortletItemSummary {
+  display: none;
+}
+.oneui .idxFlipCardContainer .dojoxPortletItemOpen .dojoxPortletItemSummary {
+  display: block;
+}
+
+
+.oneui .idxFlipCardContainer .gridContainerTable .dijitTitlePaneContentInner{
+}
+
+/**********  resize handler  ***********/
+.oneui .idxFlipCardContainer .dojoxResizeHandle {
+	float: right;
+	position: absolute;
+	right: 2px;
+	bottom: 2px;
+	width: 13px;
+	height: 13px;
+	z-index: 99999;
+	background-image: url('images/resize.png');
+	line-height: 0px;
+}
+.dijitRtl .oneui .idxFlipCardContainer .dojoxResizeHandle {
+	float: right;
+	left: 0px;
+	right: auto;
+}
+.oneui .idxFlipCardContainer .dojoxResizeNW {
+	cursor: nw-resize;
+}
+.dijitRtl .oneui .idxFlipCardContainer .dojoxResizeNW {
+    cursor: ne-resize;
+}
+.oneui .idxFlipCardContainer .dojoxResizeNE {
+	cursor: ne-resize; 
+}
+.dijitRtl .oneui .idxFlipCardContainer .dojoxResizeNE {
+    cursor: nw-resize;
+}
+.oneui .idxFlipCardContainer .dojoxResizeW {
+	cursor: w-resize; 
+}
+.oneui .idxFlipCardContainer .dojoxResizeN { 
+	cursor: n-resize; 
+}
+.oneui .idxFlipCardContainer .dojoxResizeHandleClone {
+	position:absolute; top:0; left:0; 
+	border:1px dashed #666; 
+	z-index:999; 
+}
+
+.oneui .idxFlipCardContainer .portletItemMaximum .dojoxResizeHandle{
+	display: none;
+}
+

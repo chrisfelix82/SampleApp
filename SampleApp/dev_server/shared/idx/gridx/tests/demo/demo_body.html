@@ -1,0 +1,271 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Gridx OneUI Theme - Body</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+	<style type="text/css">
+		.testDataWarningStatus,
+		.testDataCriticalStatus,
+		.testDataNormalStatus {
+			background-image: url("../support/data/status.png");
+			background-repeat: no-repeat;
+			width: 20px;
+			height: 20px;
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		.testDataWarningStatus {
+			background-position: 0 -2px;
+		}
+
+		.testDataNormalStatus {
+			background-position: -18px -2px;
+		}
+
+		.testDataCriticalStatus {
+			background-position: -36px -2px;
+		}
+
+		.testToolbarButtonCut,
+		.testToolbarButtonCopy,
+		.testToolbarButtonPaste {
+			background-image: url("../support/data/toolbarbuttons.png");
+			background-repeat: no-repeat;
+			width: 16px;
+			height: 16px;
+			background-position: -4px -6px;
+		}
+
+		.gridxRtl .testToolbarButtonCut,
+		.gridxRtl .testToolbarButtonCopy,
+		.gridxRtl .testToolbarButtonPaste {
+			background-image: url("../support/data/toolbarbuttons_rtl.png");
+		}
+
+		.testToolbarButtonCopy {
+			background-position: -29px -5px;
+		}
+
+		.testToolbarButtonPaste {
+			background-position: -55px -5px;
+		}
+
+		.dijitButtonHover .testToolbarButtonCut,
+		.dijitButtonActive .testToolbarButtonCut,
+		.dijitButtonHover .testToolbarButtonCopy,
+		.dijitButtonActive .testToolbarButtonCopy,
+		.dijitButtonHover .testToolbarButtonPaste,
+		.dijitButtonActive .testToolbarButtonPaste {
+			background-image: url("../../../icons/images/editorIconsHover.png");
+			background-repeat: no-repeat;
+			width: 16px;
+			height: 16px;
+			background-position: -54px -1px;
+		}
+
+		.gridxRtl .dijitButtonHover .testToolbarButtonCut,
+		.gridxRtl .dijitButtonActive .testToolbarButtonCut,
+		.gridxRtl .dijitButtonHover .testToolbarButtonCopy,
+		.gridxRtl .dijitButtonActive .testToolbarButtonCopy,
+		.gridxRtl .dijitButtonHover .testToolbarButtonPaste,
+		.gridxRtl .dijitButtonActive .testToolbarButtonPaste {
+			background-image: url("../../../icons/images/editorIconsHover_rtl.png");
+		}
+
+
+		.dijitButtonHover .testToolbarButtonCopy, 
+		.dijitButtonActive .testToolbarButtonCopy {
+			background-position: -72px -1px;
+		}
+
+		.dijitButtonHover .testToolbarButtonPaste,
+		.dijitButtonActive .testToolbarButtonPaste {
+			background-position: -90px -1px;
+		}
+		
+		.gridx {
+			width: 500px;
+			height: 300px;
+		}
+	</style>
+	<script type="text/javascript" src="../../../tests/dojoVersion.js"></script>
+	<script type="text/javascript">
+		dojoCSSImport("../../../../../@dojopath@/dojo/resources/dojo.css", "idxStyles");
+		dojoCSSImport("../../../../../@dojopath@/dijit/themes/dijit.css", "idxStyles");
+		dojoCSSImport("../../../../../@dojopath@/dijit/themes/dijit_rtl.css", "idxStyles");
+		dojoCSSImport("../../../../../@dojopath@/gridx/resources/Gridx.css", "idxStyles");
+		dojoCSSImport("../../../../../@dojopath@/gridx/resources/Gridx_rtl.css", "idxStyles");
+	</script>
+	<style id="idxStyles" type="text/css">
+		@import "../../../themes/oneui/dijit/document.css";
+		@import "../../../themes/oneui/oneui.css";
+		@import "../../../tests/test.css
+	</style>
+	<link rel='stylesheet' href="../support/common.css" />
+
+	<script type="text/javascript">
+		var dojoConfig = currentDojoVersion.dojoConfig;
+		dojoConfig.parseOnLoad = true;
+		dojoScriptImport("../../../../../@dojopath@/dojo/dojo.js", "postDojo");
+	</script>
+	<script type="text/javascript" src='demo.js'></script>
+	<script type="text/javascript" src="../../../tests/commonTest.js"></script>
+</head>
+<body class='oneui' style='margin: 5px;'>
+	<div style="height: 400px; width: 100%;"
+		data-dojo-type="dijit/layout/BorderContainer"
+		data-dojo-props='
+			design: "sidebar"
+		'><div class="idxListNavigation"
+			style="width: 175px;"
+			data-dojo-type="idx/layout/HeaderPane"
+			data-dojo-props='
+				region: "leading",
+				splitter: true,
+				title: "Features"
+			'><span data-dojo-type="idx/layout/ListNavController"
+				style="bottom:0;"
+				containerid="std_gblMgmtStack"
+			></span
+		></div
+		><div data-dojo-type="idx/layout/HeaderPane"
+			data-dojo-props='
+				title: "Gridx OneUI Demo",
+				region: "center"
+			'><div id="std_gblMgmtStack"
+				data-dojo-type="dijit/layout/StackContainer"
+				><div data-dojo-type="dijit/layout/ContentPane"
+					data-dojo-props='title: "OneUI Gridx"'>
+					<div id="grid1"
+						data-dojo-id='grid1'
+						data-dojo-type='gridx/Grid'
+						data-dojo-props='
+							cacheClass: "gridx/core/model/cache/Sync",
+							store: gridStore,
+							structure: structure1,
+							autoWidth: true,
+							modules: [
+								"gridx/modules/filter/Filter",
+								"gridx/modules/CellWidget",
+								"gridx/modules/ColumnResizer",
+								"gridx/modules/ToolBar",
+								"gridx/modules/SummaryBar",
+								"idx/gridx/modules/Sort",
+								"idx/gridx/modules/filter/QuickFilter",
+								"gridx/modules/Focus"
+							]
+					'></div>
+				</div>
+				
+				<div data-dojo-type="dijit.layout.ContentPane"
+					data-dojo-props='title: "Row Separation"'>
+					<div id="grid2"
+						data-dojo-id='grid2'
+						data-dojo-type='gridx/Grid'
+						data-dojo-props='
+							"class": "gridxAlternatingRows gridxWholeRow",
+							cacheClass: "gridx/core/model/cache/Sync",
+							store: gridStore,
+							structure: structure1,
+							autoWidth: true,
+							selectRowTriggerOnCell: true,
+							modules: [
+								"gridx/modules/filter/Filter",
+								"gridx/modules/CellWidget",
+								"gridx/modules/extendedSelect/Row",
+								"gridx/modules/ColumnResizer",
+								"gridx/modules/ToolBar",
+								"gridx/modules/SummaryBar",
+								"idx/gridx/modules/Sort",
+								"idx/gridx/modules/filter/QuickFilter",
+								"gridx/modules/Focus"
+							]
+					'></div>
+				</div>
+				
+				<div data-dojo-type="dijit/layout/ContentPane"
+					data-dojo-props='title: "Indirect Single Selection"'>
+					<div id="grid3"
+						data-dojo-id='grid3'
+						data-dojo-type='gridx/Grid'
+						data-dojo-props='
+							cacheClass: "gridx/core/model/cache/Sync",
+							store: gridStore,
+							structure: structure1,
+							autoWidth: true,
+							selectRowMultiple: false,
+							modules: [
+								"gridx/modules/filter/Filter",
+								"gridx/modules/CellWidget",
+								"gridx/modules/select/Row",
+								"gridx/modules/RowHeader",
+								"gridx/modules/IndirectSelect",
+								"gridx/modules/ColumnResizer",
+								"gridx/modules/ToolBar",
+								"gridx/modules/SummaryBar",
+								"idx/gridx/modules/Sort",
+								"idx/gridx/modules/filter/QuickFilter",
+								"gridx/modules/Focus"
+							]
+					'></div>
+				</div>
+
+				<div data-dojo-type="dijit/layout/ContentPane"
+					data-dojo-props='title: "Indirect Multiple Selection"'>
+					<div id="grid4"
+						data-dojo-id='grid4'
+						data-dojo-type='gridx/Grid'
+						data-dojo-props='
+							cacheClass: "gridx/core/model/cache/Sync",
+							store: gridStore,
+							structure: structure1,
+							autoWidth: true,
+							modules: [
+								"gridx/modules/filter/Filter",
+								"gridx/modules/CellWidget",
+								"gridx/modules/extendedSelect/Row",
+								"gridx/modules/RowHeader",
+								"gridx/modules/IndirectSelect",
+								"gridx/modules/ColumnResizer",
+								"gridx/modules/ToolBar",
+								"gridx/modules/SummaryBar",
+								"idx/gridx/modules/Sort",
+								"idx/gridx/modules/filter/QuickFilter",
+								"gridx/modules/Focus"
+							]
+					'></div>
+				</div>
+
+				<div data-dojo-type="dijit/layout/ContentPane"
+					data-dojo-props='title: "Row Header & Cell Selection"'>
+					<div id="grid5"
+						data-dojo-id='grid5'
+						data-dojo-type='gridx/Grid'
+						data-dojo-props='
+							cacheClass: "gridx/core/model/cache/Sync",
+							store: gridStore,
+							structure: structure1,
+							autoWidth: true,
+							modules: [
+								"gridx/modules/filter/Filter",
+								"gridx/modules/CellWidget",
+								"gridx/modules/extendedSelect/Row",
+								"gridx/modules/extendedSelect/Column",
+								"gridx/modules/extendedSelect/Cell",
+								"gridx/modules/RowHeader",
+								"gridx/modules/ColumnResizer",
+								"gridx/modules/ToolBar",
+								"gridx/modules/SummaryBar",
+								"idx/gridx/modules/Sort",
+								"idx/gridx/modules/filter/QuickFilter",
+								"gridx/modules/Focus"
+							]
+					'></div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</body>
+</html>

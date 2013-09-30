@@ -1,0 +1,23 @@
+{
+  "name": "SampleApp",
+  "version": "1.0.0",
+  "description": "Sample cordova app with dojox/app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chrisfelix82/SampleApp.git"
+  },
+  "keywords": [
+    "mobile",
+    "cordova",
+    "dojox/app"
+  ],
+  "author": "Chris Felix <chrisfelix82@gmail.com> (https://github.com/chrisfelix82)",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/chrisfelix82/SampleApp/issues"
+  }
+}

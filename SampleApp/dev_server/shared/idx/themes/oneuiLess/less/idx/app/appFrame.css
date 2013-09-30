@@ -1,0 +1,81 @@
+.textShadowDark {
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+}
+.idxappframeoptions {
+  background-image: url(../images/blank.gif?marquee=header&body=center&marqueeSizing=fixed&borderDesign=headline);
+}
+div.idxAppFrame {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+div.idxAppFrameHeader {
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  height: 38px;
+  border: none;
+  background: #131313;
+  background: -moz-linear-gradient(top, #3e3e3e 0%, #131313 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3e3e3e), color-stop(100%, #131313));
+  background: -webkit-linear-gradient(top, #3e3e3e 0%, #131313 100%);
+  background: -o-linear-gradient(top, #3e3e3e 0%, #131313 100%);
+  background: -ms-linear-gradient(top, #3e3e3e 0%, #131313 100%);
+  background: linear-gradient(top, #3e3e3e 0%, #131313 100%);
+  filter: 'progid:DXImageTransform.Microsoft.gradient(startColorstr= #3e3e3e ,endColorstr= #131313 ,GradientType=0)';
+}
+div.idxAppFrameFooter {
+  position: absolute;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  height: 0;
+  border: none;
+  background: none;
+}
+div.idxAppFrameLeft {
+  position: absolute;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 0;
+  border: none;
+  background: none;
+}
+div.idxAppFrameRight {
+  position: absolute;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 0;
+  border: none;
+  background: none;
+}
+div.idxAppFrameCenter {
+  position: absolute;
+  overflow: hidden;
+}
+div.idxAppFrameMarquee {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 30px;
+  float: left;
+  overflow: hidden;
+  padding: 0;
+  background: none;
+  color: #FFF;
+}
+div.idxAppFrameBody {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  padding: 0;
+  background: none;
+}

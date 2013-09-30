@@ -1,0 +1,31 @@
+{
+	"id": "app",
+	"name": "app",
+	"description": "Example dojox/app based Worklight app",
+	"dependencies": ["dojox/mobile/Heading",
+	"dojo/store/Memory",
+	"dojo/store/Observable",
+	"dojox/mvc/EditStoreRefListController",
+	"dojox/app/utils/mvcModel",
+	"dojo/store/DataStore",
+	"commonapp/utils/WorklightStore",
+	"commonapp/utils/hybridConsole"],
+	"controllers": ["dojox/app/controllers/Load",
+	"dojox/app/controllers/Transition",
+	"dojox/app/controllers/Layout"],
+	"stores": {
+		
+	},
+	"models": {
+		
+	},
+	"defaultView": "testView",
+	"defaultTransition": "slide",
+	"views": {
+		"testView": {
+			"template": "commonapp/welcome/testView.html",
+			"controller": "commonapp/welcome/testView.js",
+			"nls": "commonapp/welcome/nls/testView"
+		}
+	}
+}

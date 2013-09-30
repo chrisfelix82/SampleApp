@@ -1,0 +1,98 @@
+//
+// Licensed Materials - Property of IBM
+// (C) Copyright IBM Corp. 2010, 2012 All Rights Reserved
+// US Government Users Restricted Rights - Use, duplication or
+// disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+//
+
+
+.dijitRtl & {
+    div {
+        &.idxAppMarqueeLeft {
+          overflow: hidden;
+          position: absolute;
+          padding-left: 25px;
+          background: none black;
+        }
+        
+        &.idxAppMarqueeRight {
+          overflow: hidden;
+          position: absolute;
+          padding-right: 30px;
+          padding-left: 0px;
+          background: none;
+        }
+        
+        &.idxAppMarqueeBody {
+          text-align: left;
+        }
+        
+        .idxAppFrameMarquee {
+            div {
+                &.idxAppMarqueeLeft {
+                    padding-left: 25px;
+                }
+                    &.idxAppMarqueeRight {
+                      padding-right: 0px;
+                    }
+            }
+            .idxAppMarquee {
+                &.idxAppMarqueeShowAppLogo {
+                    .idxAppMarqueeAppLogo {
+                          right: 0px;
+                          left: auto;
+                    }
+                    .idxAppMarqueeVendorLogo {
+                          right: auto;
+                          left: 25px;
+                    }
+                }
+                &.idxAppMarqueeShowAppName {
+                    .idxAppMarqueeAppName {
+                        padding-right: 0px;
+                    }
+                    .idxAppMarqueeVendorName {
+                        text-align: left;
+                        padding-left: 0px;
+                    }
+                }
+            }
+        }
+        
+        .idxAppMarquee {
+            &.idxAppMarqueeShowAppLogo {
+                .idxAppMarqueeAppLogo {
+                      left: auto;
+                      right: 30px;
+                }
+                .idxAppMarqueeVendorLogo {
+                    right: auto;
+                    left: 25px;
+                }		
+            }
+            &.idxAppMarqueeShowAppName {
+                .idxAppMarqueeAppName {
+                    left: auto;
+                    right: 0px;
+                    padding-left: 0px;
+                    padding-right: 30px;
+                }
+            }
+        }
+    }
+    &.dijit_a11y {
+        .idxAppMarquee {
+            &.idxAppMarqueeShowAppLogo {
+                .idxAppMarqueeAppName {
+                    left: auto;
+                    right: 0px;
+                    padding-left: 0px;
+                    padding-right: 30px;
+                }
+                .idxAppMarqueeVendorName {
+                    text-align: left;
+                }
+            }
+        }
+    }
+}

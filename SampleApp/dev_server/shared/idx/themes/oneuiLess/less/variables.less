@@ -1,0 +1,165 @@
+//	IBM One UI .less variables file
+//
+//	This file defines global fonts and color variables.
+//
+//	© IBM 2013. All rights reserved
+
+
+//
+//
+//	IBM Fonts
+//
+//
+
+@oneUISans: "Helvetica, Arial, Tahoma, Verdana, sans-serif";
+@oneUISerif: "Georgia, serif";
+
+//
+//
+//	IBM One UI Text Colors
+//
+//
+
+@strongText: #000000;
+@defaultText: #222222;
+@secondaryText: #333333;
+@tertiaryText: #555555;
+@lightText: #666666;
+@hintText: #cccccc;
+
+@headerStrong: #ffffff;
+@headerMenu: #dddddd;
+
+@headerBlueText: #ffffff;
+@headerGrayText: #000000;
+@headerGrayLightText: #666666;
+@headerGrayTab: #444444;
+@headerBlueTabSelected: #222222;
+@headerGrayTabSelected: #222222;
+@headerBlueTabSeparator: #065B86;
+@headerGrayTabSeparator: #dbdbdb;
+
+@headerBadgeError: #ff0000;
+@headerBadgeWarn: #ffaa00;
+@headerBadgeInfo: #008abf;
+@headerBadgeSuccess: #0c7f00;
+
+@tableColHeaderLabel: #444444;
+@tableBody: #333333;
+
+@hover: #cce8f2;
+@selected: #ebf6fa;
+
+@link: #00649d;
+@linkHover: #05386b;
+@linkVisited: #745285;
+@linkAlt1: #666666;
+@linkAlt1Hover: #222222;
+@linkAlt2: #cccccc;
+@linkAlt2Hover: #000000;
+@linkTertiary: #777777;
+@linkTertiaryHover: #333333;
+
+//
+//
+//	Banner and header background colors
+//	Edit these colors to change the color of the black banner at the top of the screen. If you want a solid color, make them both the same value.
+//
+
+@bannerTop: #3e3e3e;
+@bannerBottom: #131313;
+@logoBackgroundTop: #282828;
+@logoBackgroundBottom: #0c0c0c;
+.textShadowDark {
+  text-shadow: 0 1px 0 rgba(0,0,0,.3);
+}
+
+
+
+
+
+
+//
+//
+//	Hilight colors | IBM Core Marketing colors
+//
+//
+
+@yellowLight: #ffe14f;
+@yellow: #ffcf01;
+@yellowDark: #fdb813;
+
+@orangeLight: #f19027;
+@orange: #dd731c;
+@orangeDark: #b8471b;
+
+@redLight: #f04e37;
+@red: #d9182d;
+@redDark: #a91024;
+
+@magentaLight: #f389af;
+@magenta: #ee3d96;
+@magentaDark: #ba006e;
+
+@purpleLight: #ab1a86;
+@purple: #7f1c7d;
+@purpleDark: #3b0256;
+
+
+@blue1Light: #82d1f5;
+@blue1: #00b2ef;
+@blue1Dark: #00649d;
+
+@blue2Light: #00b0da;
+@blue2: #008abf;
+@blue2Dark: #003f69;
+
+@tealLight: #00a6a0;
+@teal: #007670;
+@tealDark: #006058;
+
+@greenLight: #8cc63f;
+@green: #17af4b;
+@greenDark: #008a52;
+
+@oliveLight: #a5a215;
+@olive: #838329;
+@oliveDark: #594f13;
+
+//
+//
+//  Common image files
+//
+//
+
+@messageIcons: "images/msgIcons_24bit.png";
+@loadingLarge: "images/loadingAnimation38px.gif";
+
+
+//
+//
+//	CSS3 Cross Browser Properties
+//
+//
+
+.verticalGradient(@gradientColor1: #ffffff; @gradientColor2: #000000) {
+	background: @gradientColor2;
+	background:-moz-linear-gradient(top,@gradientColor1 0%,@gradientColor2 100%);
+	background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,@gradientColor1),color-stop(100%,@gradientColor2));
+	background:-webkit-linear-gradient(top,@gradientColor1 0%,@gradientColor2 100%);
+	background:-o-linear-gradient(top,@gradientColor1 0%,@gradientColor2 100%);
+	background:-ms-linear-gradient(top,@gradientColor1 0%,@gradientColor2 100%);
+	background:linear-gradient(top,@gradientColor1 0%,@gradientColor2 100%);
+	filter: ~"'progid:DXImageTransform.Microsoft.gradient(startColorstr=" @gradientColor1 ~",endColorstr=" @gradientColor2 ~",GradientType=0)'";
+}
+
+.border-radius (@radius: 0px) {
+	-webkit-border-radius: @radius;
+	border-radius: @radius;
+}
+
+.box-shadow (@x: 0; @y: 0; @blur: 0; @color: rgba(0,0,0,.13)) {
+  box-shadow: @arguments;
+  -moz-box-shadow: @arguments;
+  -webkit-box-shadow: @arguments;
+}
